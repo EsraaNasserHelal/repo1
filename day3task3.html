@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing:border-box;
+        }
+        ul{
+            
+            display:flex;
+            min-height:10vh;
+            justify-content:space-evenly;
+            align-items:center;
+        }
+        li{
+            list-style:none;
+        }
+        li>a{
+            text-decoration:none;
+            color:rgb(237 28 28);
+            font:bold 15px verdana;
+        }
+        li>a:hover{
+            color:rgb(164 156 156);
+        }
+        ul>h1{
+            color:white;
+            text-shadow:1px 1px 1px black , -1px -1px 1px gray ;
+            letter-spacing:5px;
+
+        }
+            ul > h1:hover {
+                text-shadow: -1px -1px 1px black, 1px 1px 1px gray;
+                cursor:pointer;
+            }
+
+            .intro{
+                background-image:url(p3.jpg);
+                height:40vh;
+                background-position:center;
+                background-size:cover;
+                color:white;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
+            }
+            .intro>h2{
+                text-align:center;
+                font-size:2rem;
+                margin:2rem 0;
+            }
+            .intro>button{
+                padding:1.5rem 2rem;
+                border:none;
+                outline:none;
+                font:bold 15px tahoma;
+                border-radius:10px;
+                background-image:linear-gradient(to left , rgb(174 214 248) , rgb(85 103 243));
+            }
+                .intro > button:hover {
+                    background-image: linear-gradient(to right, rgb(174 214 248), rgb(85 103 243));
+                }
+               .map{
+                    display: flex;
+                    height: 35vh;
+                    background-color: gray;
+                    flex-direction:row;
+                    
+                   
+                }
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+                .branches{
+                    height: 80%;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    
+                }
+                .mapping{
+                    height: 100%;
+                    width: 30%;
+                }
+                .branch{
+                    height: 100%;
+                    width: 70%;
+                    
+                    display: flex;
+                    flex-direction:column;
+                    justify-content: space-evenly;
+                    
+                   
+                }
+                .div1{
+                  
+                    display: flex;
+                    flex-direction:column;
+                    flex-grow: 1;
+                    flex-basis: 50%;
+                    
+                
+                }
+                
+                .div3{
+                    height: 20%;
+                    width: 100%;
+                    display: flex;
+                    flex-direction:row;
+                }
+                p{
+                    height: 20%;
+                    width: 80%;
+                    border: 2px solid black;
+                    margin: 5px;
+                    padding: 10px;
+                    text-align: center;
+                    
+                }
+               
+                div h3{
+                    cursor: pointer;
+                    color: rgb(0, 0, 0);
+                    margin: 15px;
+                
+                }
+                .contact{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    height: 30vh;
+                    flex-grow: 1;
+                    flex-basis: 50%; 
+                    
+                }
+                
+                
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Contact</a></li>
+        <h1>ITI Admission</h1>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Gallery</a></li>
+    </ul>
+    <div class="intro">
+        <h2>Limitted Opportunities <br/> Join Now</h2>
+        <button>Register</button>
+    </div>
+    <div class="map">
+        <!-- <div class="location"></div> -->
+        <div class="mapping">
+            <img src="map.PNG">
+
+        </div>
+        <div class="branch"> 
+            <div class="branches">
+                <div class="div1">
+                    <p id="mainbranch">ITI_smart village</p>
+                    <p id="b">ITI_Assuit</p>
+                    <p id="c">ITI_Ismalia</p>
+                    <p id="d">ITI_Menofia</p>
+    
+                </div>
+                <div class="div1" id="f">
+                    <p >ITI_Alexandia</p>
+                    <p >ITI_Aswan</p>
+                    <p >ITI_Mansora</p>
+                    <p >ITI_Minya</p>
+    
+                </div>
+
+            </div>
+            <div class="div3" >
+                <h3 class="test" onclick="add()">main branch</h3>
+                <h3 onclick="remove()">branch</h3>
+
+            </div>
+        </div>
+    </div>
+    
+    <div id="contact">
+        <img src="contact.PNG">
+    </div>
+    <script>
+        function add(){
+            var x=document.getElementById("mainbranch")
+            x.style.color="red";
+            var x=document.getElementById("b")
+            x.style.color="black";
+            var x=document.getElementById("c")
+            x.style.color="black";
+            var x=document.getElementById("d")
+            x.style.color="black";
+            var x=document.getElementById("f")
+            x.style.color="black";
+        }
+        function remove(){
+            var x=document.getElementById("mainbranch")
+            x.style.color="black";
+            var x=document.getElementById("b")
+            x.style.color="red";
+            var x=document.getElementById("c")
+            x.style.color="red";
+            var x=document.getElementById("d")
+            x.style.color="red";
+            var x=document.getElementById("f")
+            x.style.color="red";
+
+           
+        }
+    </script>
+</body>
+</html>
